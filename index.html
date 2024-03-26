@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey-Form</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+          Please take your time to fill up this survey form
+        </p>
+      </header>
+
+      <form action="./form-data" method="post" id="survey-form">
+        <fieldset id="fieldset-one">
+          <label id="name-label" for="name"
+            >Name
+            <input
+              type="text"
+              name="full-name"
+              id="name"
+              placeholder=" Enter your fullname"
+              required
+          /></label>
+
+          <label id="email-label" for="email"
+            >Email
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" Enter your mail id"
+              required
+          /></label>
+
+          <label id="number-label" for="number"
+            >Age (optional)
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="12"
+              max="65"
+              placeholder=" Enter your age (optional)"
+          /></label>
+
+          <label for="dropdown"
+            >What is your current role?
+            <select name="current-role" id="dropdown" required>
+              <option value="">select role</option>
+              <option value="1">Working Professional</option>
+              <option value="2">Job Seeker</option>
+              <option value="3">Student</option>
+              <option value="4">Other</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset id="fieldset-two">
+          <legend>What is your highest qualification?</legend>
+          <label for="qualification-one">
+            <input
+              type="radio"
+              id="qualification-one"
+              class="inline"
+              name="qualification-details"
+              value="phd"
+              checked
+            />
+            Phd
+          </label>
+
+          <label for="qualification-two">
+            <input
+              type="radio"
+              id="qualification-two"
+              class="inline"
+              name="qualification-details"
+              value="m-tech"
+            />
+            M-Tech
+          </label>
+
+          <label for="qualification-three">
+            <input
+              type="radio"
+              id="qualification-three"
+              class="inline"
+              name="qualification-details"
+              value="be"
+            />
+            B.E
+          </label>
+        </fieldset>
+
+        <fieldset id="fieldset-three">
+          <legend>What is your field of interest?</legend>
+          <label for="full-stack">
+            <input
+              type="checkbox"
+              id="full-stack"
+              class="inline"
+              value="full-stack-engineer"
+            />
+            Full Stack Engineer
+          </label>
+
+          <label for="front-end">
+            <input
+              type="checkbox"
+              id="front-end"
+              class="inline"
+              value="front-end-engineer"
+            />
+            Front End Engineer
+          </label>
+
+          <label for="back-end">
+            <input
+              type="checkbox"
+              id="back-end"
+              class="inline"
+              value="back-end-engineer"
+            />
+            Back End Enginner
+          </label>
+
+          <label for="manual">
+            <input
+              type="checkbox"
+              id="manual"
+              class="inline"
+              value="manual-test-engineer"
+            />
+            Manual Test Enginner
+          </label>
+
+          <label for="automation">
+            <input
+              type="checkbox"
+              id="automation"
+              class="inline"
+              value="automation-test-engineer"
+            />
+            Automation Test Enginner
+          </label>
+
+          <label for="data">
+            <input
+              type="checkbox"
+              id="data"
+              class="inline"
+              value="data-science"
+            />
+            Data Science
+          </label>
+
+          <label for="ai-ml">
+            <input
+              type="checkbox"
+              id="ai-ml"
+              class="inline"
+              value="artificial-machine"
+            />
+            Artificial Intelligence / Machine Learning
+          </label>
+        </fieldset>
+
+        <fieldset id="fieldset-four">
+          <legend>About yourself</legend>
+          <textarea
+            name="self-info"
+            id="info"
+            cols="30"
+            rows="3"
+            placeholder=" Tell us about yourself..."
+          ></textarea>
+        </fieldset>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
